@@ -171,6 +171,11 @@ export class OpenAICompatibleChatLanguageModel implements LanguageModelV1 {
       seed,
       ...providerMetadata?.[this.providerOptionsName],
 
+      reasoning_effort:
+        providerMetadata?.[this.providerOptionsName]?.reasoningEffort ??
+        providerMetadata?.['openai-compatible']?.reasoningEffort ??
+        this.settings.reasoningEffort,
+
       // messages:
       messages: convertToOpenAICompatibleChatMessages(prompt),
     };

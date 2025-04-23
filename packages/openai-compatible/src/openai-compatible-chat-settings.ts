@@ -15,4 +15,9 @@ Defaults to `false`.
 @deprecated Use `simulateStreamingMiddleware` instead.
    */
   simulateStreaming?: boolean;
+
+  /**
+Reasoning effort for reasoning models. Defaults to `medium`.
+   */
+  reasoningEffort?: 'low' | 'medium' | 'high';
 }
