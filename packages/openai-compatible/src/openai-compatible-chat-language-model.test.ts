@@ -675,7 +675,7 @@ describe('doGenerate', () => {
 
       const model = new OpenAICompatibleChatLanguageModel(
         'gpt-4o-2024-08-06',
-        { reasoningEffort: 'high' },
+        {},
         {
           provider: 'test-provider',
           url: () => 'https://my.api.com/v1/chat/completions',
